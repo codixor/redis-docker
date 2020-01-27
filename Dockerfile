@@ -21,8 +21,6 @@ RUN curl --silent -L https://github.com/bitnami/wait-for-port/releases/download/
     curl --silent -L https://raw.githubusercontent.com/bitnami/wait-for-port/master/COPYING > /opt/bitnami/licenses/wait-for-port-1.0.txt
 
 COPY rootfs /
-COPY sysctl.conf /etc/
-
 RUN /postunpack.sh
 ENV BITNAMI_APP_NAME="redis" \
     BITNAMI_IMAGE_VERSION="5.0.7-debian-10-r2" \
